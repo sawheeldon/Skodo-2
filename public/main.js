@@ -49,7 +49,7 @@ function newUser(username, password) {
         'password':password
     };    
     $.ajax({
-            type:"POST",
+            type:'POST',
             url:"/users/create",
             data: q_string,
             dataType:'json',
@@ -254,7 +254,7 @@ $(document).ready(function() {
           
          //new user   
             $('#newUser').submit(function (event) {
-                // alert("here!!!");
+                 //alert("here!!!");
                 event.preventDefault();
                 // var username = $('#username').val();
                 // var password = $('#password').val();
