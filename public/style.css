@@ -1,0 +1,203 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    /*The box-sizing property is used to tell the browser what the sizing properties (width and height) should include border-box.*/
+    box-sizing: border-box;
+    /*reset Chrome user agent styles*/
+    -webkit-margin-before: 0px;
+    -webkit-margin-after: 0px;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    -webkit-padding-before: 0px;
+    -webkit-padding-after: 0px;
+    -webkit-padding-start: 0px;
+    -webkit-padding-end: 0px;
+}
+
+
+/* -------------------------------------
+General styles (General Module, wrapping around the modules bellow)
+(the styles used everywhere in the page (like the Body) or styles which are used in more than 2 of the modules bellow (h2, h3, h4, h5, h6, p, a, ul, li))
+*/
+
+body {
+    text-align: center;
+    font-family: 'Righteous', cursive;
+    font-size: 18px;
+    background-color: #3399FF;
+}
+
+h1 {
+    font-size: 50px;
+    padding: 2rem;
+    color: aliceblue;
+}
+
+h2 {
+    font-size: 30px;
+    padding: 1.2rem;
+    color: aliceblue;
+}
+h3 {
+    font-size: 20px;
+    padding: 1.2rem;
+}
+h4 {
+    font-size: 30px;
+    padding: 1.2rem;
+    color: aliceblue;
+}
+
+p{
+    margin-top:0.5rem;
+    margin-bottom:0.5rem;
+}
+.buttons {
+    font-size: 20px;
+    color: aliceblue;
+    background: slategray;
+    border-color: darkslategray;
+    margin-top:1rem;
+}
+
+#login {
+    margin-bottom: 1rem;
+}
+
+#backB{
+    cursor:pointer;
+    padding-top:1rem;
+    padding-bottom: 1rem;
+}
+
+#italyLogo, #englishLogo{
+    cursor:pointer;
+    padding-top:1rem;
+    padding-bottom: 1rem;
+    height:125px;
+    width:150px;
+}
+
+#videoResult {
+    list-style: outside none none;
+}
+
+#latestNewsArea{
+    padding:5px;
+}
+
+.latestNews {
+    margin-bottom:1.2rem;
+    border-style: solid;
+    border-color:aliceblue;
+    border-width:2px;
+}
+
+#latestItNewsTitle, #latestEnNewsTitle {
+    color: aliceblue;
+    font-size: 30px;
+    padding: 1.2rem;
+}
+
+.latestItNews, .latestEnNews {
+    margin-bottom:1.2rem;
+    border-style: solid;
+    border-color:aliceblue;
+    border-width:2px;
+}
+
+#latestItImageOne, #latestEnImageOne {
+    height:300px;
+    border: 2px solid darkslategray;
+    background-size:cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    margin-bottom:1rem;
+    
+}
+
+
+/* -------------------------------------
+Header styles (Main Module)
+(all the styles inside the < header > or < nav > tags)
+*/
+
+
+/* -------------------------------------
+Content styles (Main Module)
+(all the styles inside the < sections > or < aside > tags)
+*/
+
+
+/* -------------------------------------
+Footer styles (Main Module)
+(all the styles inside the < footer > tag)
+*/
+
+
+/* -------------------------------------
+place all the desktop styles above this line
+Responsive styles
+(the very last module in the CSS, contains all the media queries and it is dealing with the compatibility with mobiles and tablets)
+place all the mobile tables styles bellow this line
+*/
+
+
+/*ipad lanscape / small laptop*/
+
+@media only screen and (max-width: 1024px) {
+    /* acting like an IF statement, the media query is a set of conditions in which the containing css will be applied
+    for example the statament above says: IF the media on which this CSS is going to used is SCREEN (Mobiles, Tables, Laptops, Desktops or Projectors) and the maximum resolution of that device is 1024px, THEN apply the body color blue for all the text
+    */
+}
+
+
+/*ipad potrait*/
+
+@media only screen and (max-width: 768px) {
+
+}
+
+
+/*iPhone landscape*/
+
+@media only screen and (max-width: 480px) {
+     body {
+    font-size: 20px;
+}
+
+h2 {
+    display: none;
+}
+
+
+#latestItNewsTitle, #latestEnNewsTitle {
+    font-size: 30px;
+    
+}
+
+
+#latestItImageOne, #latestEnImageOne {
+    height:220px;
+    
+}
+
+}
+
+
+/*iPhone portrait*/
+
+@media only screen and (max-width: 320px) {
+    
+#italyLogo, #englishLogo {
+    width:100%;
+    
+}
+
+#loginText{
+    display:none;
+}
+
+}

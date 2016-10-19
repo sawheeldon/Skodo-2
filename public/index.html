@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Skodo Login/Sign up</title>
+    <!-- Links  -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Architects+Daughter|Baloo+Chettan|Baloo+Paaji|Bungee+Shade|Chewy|Coming+Soon|Indie+Flower|Righteous|Shadows+Into+Light" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main class="container">
+        
+          <!--section for the welcome-->
+          
+        <header class="col-xs-12">
+            <h1>Skodo</h1>
+        </header>
+        <section id="signLog">
+        <section>
+            <div class="col-xs-4"></div>
+            <div id="skodoLogo">
+                <div class="col-xs-4"><img src="./images/football.png" class="img-responsive"> </div>
+            </div>
+            <div class="col-xs-4"></div>
+        </section>
+        <section class="col-xs-6 col-xs-offset-3">
+            <h2>Welcome to Skodo</h2>
+            <p id="loginText">Sign up or log in below to test out our funky new app. Skodo is all about football news and highlights.</p>
+        </section>
+        
+          <!--end of welcome-->
+        
+          <!--section for the login page-->
+          
+        <section class="oldAccount">
+                <div class="col-xs-12">
+                    <button class="btn btn-default buttons" data-toggle="collapse" data-target="#content" id="login"> Login </button>
+                <div class="collapse" id="content">
+                    <div class="well">
+                        <form id="existingUser" action="login" method="login">
+                            <div class="form-group">
+                                <label for="username"> Username </label>
+                                <input name="username" value=""  type="username" class="form-control" id="username">
+                            </div>
+                            <div class="form-group">
+                                <label for="password"> Password </label>
+                                <input name="password" value="" type="password" class="form-control" id="password">
+                            </div>
+                            <div><p class="form-group loginErr"></p></div>
+                            <div class="form-group">
+                                <input type="submit" class="btn btn-default" id="login">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                </div>
+                </section>
+                 <!--end of login page section-->
+                 
+                 
+                 <!--start of section for new user signup-->
+                <section class="newAccount">
+                    <div class="col-xs-12">
+                <button class="btn btn-default buttons" data-toggle="collapse" data-target="#content_2" id="signUp"> Sign Up </button>
+                <div class="collapse" id="content_2">
+                    <div class="well">
+                        <form id="newUser"  method="post">
+                            <div class="form-group">
+                                <label for="username"> Username </label>
+                                <input name="username" value="" type="username" class="form-control" id="username">
+                            </div>
+                            <div class="form-group">
+                                <label for="password"> Password </label>
+                                <input name="password" value="" type="password" class="form-control" id="password">
+                            </div>
+                            <div><p class="form-group newLoginErr"></p></div>
+                            <div class="form-group">
+                                <input type="submit" class="btn btn-default" id="newSignUp">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                </div>
+                </section>
+                </section>
+                <!--end of section for new user signup-->
+                
+                
+                <!--Start of main display-->
+                
+              <section id="mainDisplay"> 
+              <section class="backButton">
+            <div class="col-xs-12" id="backB">
+                <span class="glyphicon glyphicon-triangle-left"></span>
+                <p>Back</p>
+            </div>
+        </section>
+        <article class="wholePage">
+        <section id="logos">
+            <div>
+                <h4 class="col-xs-12">What is going on in your league? Click on the logo to find out.</h4>
+            </div>
+            <div class="col-xs-6"><img src="./images/serieA.png" id="italyLogo" > </div>
+            <div class="col-xs-6"><img src="./images/PL.png"  id="englishLogo" > </div>
+        </section>
+        
+        <!-- video search -->
+        
+        
+        <section class="videoSearch">
+            <h3>Type in your team and see their latest highlights</h3>
+            <div class="col-xs-12 search-container">
+                    <form action="" method="">
+                        <div class="form-group getTeam">
+                            <label for="team-name"> Football Team Name </label>
+                            <input type="team-name" class="form-control" id="team-name" name="teamName" placeholder="Aston Villa">
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" class="btn btn-default submitTeam" id="submitTeam" name="teamInput">
+                        </div>
+                    </form>
+            </div>
+             <div class="video-container">
+                  <ul id="videoResult"></ul>
+            </div>      
+        </section>
+        
+         <!-- end of video search -->
+         
+         <!-- global news  -->
+         
+        <section id="latestNewsArea">
+            <div>
+                <h3 class="col-xs-12">The latest football news from around the globe.</h3>
+            </div>
+            <div class="col-xs-12 latestNews" id="latestNewsOne"></div>
+            <div class="col-xs-12 latestNews" id="latestNewsTwo"></div>
+            <div class="col-xs-12 latestNews" id="latestNewsThree"></div>
+            <div class="col-xs-12 latestNews" id="latestNewsFour"></div>
+            <div class="col-xs-12 latestNews" id="latestNewsFive"></div>
+            <div class="col-xs-12 latestNews" id="latestNewsSix"></div>
+            <div class="col-xs-12 latestNews" id="latestNewsSeven"></div>
+            <div class="col-xs-12 latestNews"><p>For more of the latest football news, please head on over to <a href="http://talksport.com/" target="_blank">Talk Sport</a></p></div>
+        </section>
+        
+         <!-- end of global news  -->
+         
+         <!-- end of main page -->
+         
+        </article>
+        
+        <!-- additional pages  -->
+        <section class="additionalPages">
+          <div class="col-xs-12 serieA">
+            <div id="serieAPI">
+            </div>
+        </div>
+        <div class="col-xs-12 EPL">
+            <div id="englishAPI"></div>
+        </div>
+        </section>
+        </section> 
+    </main>
+
+    <!-- JS  -->
+    <script src="https://code.jquery.com/jquery-3.0.0.js"></script>
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>-->
+    <script src="https://code.jquery.com/jquery-migrate-3.0.0.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>

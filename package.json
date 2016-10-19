@@ -1,0 +1,32 @@
+{
+  "name": "skodo-2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sawheeldon/Skodo-2.git"
+  },
+  "author": "Simon Wheeldon",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sawheeldon/Skodo-2/issues"
+  },
+  "homepage": "https://github.com/sawheeldon/Skodo-2#readme",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "mocha": "^3.0.2",
+    "mongodb": "^2.2.10",
+    "mongoose": "^4.6.0",
+    "request": "^2.74.0",
+    "unirest": "^0.5.1"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "chai-http": "^3.0.0"
+  }
+}
