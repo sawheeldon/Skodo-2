@@ -18,13 +18,18 @@
   },
   "homepage": "https://github.com/sawheeldon/Skodo-2#readme",
   "dependencies": {
+    "bcryptjs": "^2.3.0",
     "body-parser": "^1.15.2",
     "express": "^4.14.0",
+    "feed-read": "0.0.1",
     "mocha": "^3.0.2",
     "mongodb": "^2.2.10",
     "mongoose": "^4.6.0",
+    "passport": "^0.3.2",
+    "passport-http": "^0.3.0",
     "request": "^2.74.0",
     "unirest": "^0.5.1"
+    
   },
   "devDependencies": {
     "chai": "^3.5.0",
