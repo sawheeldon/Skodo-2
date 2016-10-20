@@ -5,11 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "./node_modules/.bin/mocha --reporter spec",
-    "start":"node server.js"
+    "start":"node server.js",
   },
-  "engines":{
-    "node":"6.7.0"
-  },
+  
   "repository": {
     "type": "git",
     "url": "git+https://github.com/sawheeldon/Skodo-2.git"
@@ -32,5 +30,8 @@
   "devDependencies": {
     "chai": "^3.5.0",
     "chai-http": "^3.0.0"
+  },
+  "engines":{
+    "node":"4.5.0"
   }
 }
