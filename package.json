@@ -28,10 +28,7 @@
     "passport": "^0.3.2",
     "passport-http": "^0.3.0",
     "request": "^2.74.0",
-    "unirest": "^0.5.1"
-    
-  },
-  "devDependencies": {
+    "unirest": "^0.5.1",
     "chai": "^3.5.0",
     "chai-http": "^3.0.0"
   },
