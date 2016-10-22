@@ -34,9 +34,9 @@ app.use(bodyParser.urlencoded({
 }));
 
 var runServer = function (callback) {
-  mongoose.connect('mongodb://localhost/skodo');
+  mongoose.connect('mongodb://<dbuser>:<dbpassword>@ds063406.mlab.com:63406/heroku_gdw46k4r');
 };
-// 
+//
 // var runServer = function(callback) {
 //     mongoose.connect(config.DATABASE_URL, function(err) {
 //         if (err && callback) {
