@@ -7,7 +7,7 @@ var mongoose = require('mongoose');
 var feed = require("feed-read");
 var http = require("http");
 
-//URLs 
+//URLs
 
 var url = 'http://www.bbc.co.uk/sport/football';
 
@@ -18,7 +18,7 @@ var unirest = require('unirest');
 var config=require('./config');
 
 
-//req schemas for players 
+//req schemas for players
 
 var User = require('./models/user');
 
@@ -33,30 +33,32 @@ app.use(bodyParser.urlencoded({
   extended: true
 }));
 
-
-
-var runServer = function(callback) {
-    mongoose.connect(config.DATABASE_URL, function(err) {
-        if (err && callback) {
-            return callback(err);
-        }
-
-        app.listen(config.PORT, function() {
-            console.log('Listening on localhost:' + config.PORT);
-            if (callback) {
-                callback();
-            }
-        });
-    });
+var runServer = function (callback) {
+  mongoose.connect('mongodb://localhost/skodo');
 };
-
-if (require.main === module) {
-    runServer(function(err) {
-        if (err) {
-            console.error(err);
-        }
-    });
-}
+//
+// var runServer = function(callback) {
+//     mongoose.connect(config.DATABASE_URL, function(err) {
+//         if (err && callback) {
+//             return callback(err);
+//         }
+//
+//         app.listen(config.PORT, function() {
+//             console.log('Listening on localhost:' + config.PORT);
+//             if (callback) {
+//                 callback();
+//             }
+//         });
+//     });
+// };
+//
+// if (require.main === module) {
+//     runServer(function(err) {
+//         if (err) {
+//             console.error(err);
+//         }
+//     });
+// }
 
 
 
@@ -150,7 +152,7 @@ app.post('/users/create', function(req, res) {
                     message: 'Internal server error 146'
                 });
             }
-        
+
         User.create({
             username: username,
             password: hash,
