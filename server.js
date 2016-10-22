@@ -25,7 +25,7 @@ var User = require('./models/user');
 var bcrypt = require('bcryptjs');
 var passport = require('passport');
 var BasicStrategy = require('passport-http').BasicStrategy;
-var mongodbUri = 'mongodb://<dbuser>:<dbpassword>@ds063406.mlab.com:63406/heroku_gdw46k4r';
+var mongodbUri = 'mongodb://heroku_gdw46k4r:pevh8mhud5jk9odkq52u4m48u4@ds063406.mlab.com:63406/heroku_gdw46k4r';
 
 
 //serves static files and uses json bodyparser
