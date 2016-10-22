@@ -25,7 +25,7 @@ var User = require('./models/user');
 var bcrypt = require('bcryptjs');
 var passport = require('passport');
 var BasicStrategy = require('passport-http').BasicStrategy;
-var mongodbUri = 'mongodb://heroku_gdw46k4r:pevh8mhud5jk9odkq52u4m48u4@ds063406.mlab.com:63406/heroku_gdw46k4r';
+// var mongodbUri = 'mongodb://heroku_gdw46k4r:pevh8mhud5jk9odkq52u4m48u4@ds063406.mlab.com:63406/heroku_gdw46k4r';
 
 
 //serves static files and uses json bodyparser
@@ -35,34 +35,34 @@ app.use(bodyParser.urlencoded({
   extended: true
 }));
 
-mongoose.connect(mongodbUri);
-
-var runServer = function (callback) {
-    mongoose.connect;
-};
+// mongoose.connect(mongodbUri);
 //
-// var runServer = function(callback) {
-//     mongoose.connect(config.DATABASE_URL, function(err) {
-//         if (err && callback) {
-//             return callback(err);
-//         }
-//
-//         app.listen(config.PORT, function() {
-//             console.log('Listening on localhost:' + config.PORT);
-//             if (callback) {
-//                 callback();
-//             }
-//         });
-//     });
+// var runServer = function (callback) {
+//     mongoose.connect;
 // };
-//
-// if (require.main === module) {
-//     runServer(function(err) {
-//         if (err) {
-//             console.error(err);
-//         }
-//     });
-// }
+
+var runServer = function(callback) {
+    mongoose.connect(config.DATABASE_URL, function(err) {
+        if (err && callback) {
+            return callback(err);
+        }
+
+        app.listen(config.PORT, function() {
+            console.log('Listening on localhost:' + config.PORT);
+            if (callback) {
+                callback();
+            }
+        });
+    });
+};
+
+if (require.main === module) {
+    runServer(function(err) {
+        if (err) {
+            console.error(err);
+        }
+    });
+}
 
 
 
