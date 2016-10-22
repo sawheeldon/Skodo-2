@@ -25,6 +25,8 @@ var User = require('./models/user');
 var bcrypt = require('bcryptjs');
 var passport = require('passport');
 var BasicStrategy = require('passport-http').BasicStrategy;
+var mongodbUri = 'mongodb://<dbuser>:<dbpassword>@ds063406.mlab.com:63406/heroku_gdw46k4r';
+
 
 //serves static files and uses json bodyparser
 app.use(express.static('public'));
@@ -33,8 +35,10 @@ app.use(bodyParser.urlencoded({
   extended: true
 }));
 
+mongoose.connect(mongodbUri);
+
 var runServer = function (callback) {
-  mongoose.connect('mongodb://<dbuser>:<dbpassword>@ds063406.mlab.com:63406/heroku_gdw46k4r');
+    mongoose.connect;
 };
 //
 // var runServer = function(callback) {
