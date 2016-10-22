@@ -36,7 +36,7 @@ app.use(bodyParser.urlencoded({
 var runServer = function (callback) {
   mongoose.connect('mongodb://localhost/skodo');
 };
-//
+// 
 // var runServer = function(callback) {
 //     mongoose.connect(config.DATABASE_URL, function(err) {
 //         if (err && callback) {
