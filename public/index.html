@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Skodo Login/Sign up</title>
     <!-- Links  -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.css">
@@ -14,9 +14,9 @@
 
 <body>
     <main class="container">
-        
+
           <!--section for the welcome-->
-          
+
         <header class="col-xs-12">
             <h1>Skodo</h1>
         </header>
@@ -32,11 +32,20 @@
             <h2>Welcome to Skodo</h2>
             <p id="loginText">Sign up or log in below to test out our funky new app. Skodo is all about football news and highlights.</p>
         </section>
-        
+
           <!--end of welcome-->
-        
+
+          <!--section for quick access-->
+
+        <section class="quickAccess">
+                <div class="col-xs-12">
+                    <button class="btn btn-default buttons" data-toggle="collapse" data-target="" id="quick-access"> Quick Access </button>
+                </div>
+        </section>
+                 <!--end of section for quick access-->
+
           <!--section for the login page-->
-          
+
         <section class="oldAccount">
                 <div class="col-xs-12">
                     <button class="btn btn-default buttons" data-toggle="collapse" data-target="#content" id="login"> Login </button>
@@ -59,10 +68,10 @@
                     </div>
                 </div>
                 </div>
-                </section>
+        </section>
                  <!--end of login page section-->
-                 
-                 
+
+
                  <!--start of section for new user signup-->
                 <section class="newAccount">
                     <div class="col-xs-12">
@@ -89,11 +98,11 @@
                 </section>
                 </section>
                 <!--end of section for new user signup-->
-                
-                
+
+
                 <!--Start of main display-->
-                
-              <section id="mainDisplay"> 
+
+              <section id="mainDisplay">
               <section class="backButton">
             <div class="col-xs-12" id="backB">
                 <span class="glyphicon glyphicon-triangle-left"></span>
@@ -108,10 +117,10 @@
             <div class="col-xs-6"><img src="./images/serieA.png" id="italyLogo" > </div>
             <div class="col-xs-6"><img src="./images/PL.png"  id="englishLogo" > </div>
         </section>
-        
+
         <!-- video search -->
-        
-        
+
+
         <section class="videoSearch">
             <h3>Type in your team and see their latest highlights</h3>
             <div class="col-xs-12 search-container">
@@ -127,13 +136,13 @@
             </div>
              <div class="video-container">
                   <ul id="videoResult"></ul>
-            </div>      
+            </div>
         </section>
-        
+
          <!-- end of video search -->
-         
+
          <!-- global news  -->
-         
+
         <section id="latestNewsArea">
             <div>
                 <h3 class="col-xs-12">The latest football news from around the globe.</h3>
@@ -147,13 +156,13 @@
             <div class="col-xs-12 latestNews" id="latestNewsSeven"></div>
             <div class="col-xs-12 latestNews"><p>For more of the latest football news, please head on over to <a href="http://talksport.com/" target="_blank">Talk Sport</a></p></div>
         </section>
-        
+
          <!-- end of global news  -->
-         
+
          <!-- end of main page -->
-         
+
         </article>
-        
+
         <!-- additional pages  -->
         <section class="additionalPages">
           <div class="col-xs-12 serieA">
@@ -164,7 +173,7 @@
             <div id="englishAPI"></div>
         </div>
         </section>
-        </section> 
+        </section>
     </main>
 
     <!-- JS  -->

@@ -6,6 +6,24 @@
 var userName;
 var userID;
 
+
+//quick access
+
+var quickAccess = function (){
+        $('#quick-access').click(function(){
+                $('#mainDisplay').show();
+                $('.wholePage').show();
+                $('.backButton').hide();
+                $('.video-container').hide();
+                $('.serieA').hide();
+                $('.EPL').hide();
+                $('#team-name').val("");
+                $('#logos').css('display', 'block');
+                $('#latestNewsArea').css('display', 'block');
+    });
+};
+
+
 //login user
 
 
@@ -47,7 +65,7 @@ function newUser(username, password) {
     var q_string = {
         'username':username,
         'password':password
-    };    
+    };
     $.ajax({
             type:'POST',
             url:"/users/create",
@@ -59,7 +77,7 @@ function newUser(username, password) {
             console.log("worked", result);
             userName = result.username;
             userID = result._id;
-           
+
             if(result.username) {
                 mainDisplay(result);
             } else {
@@ -140,7 +158,7 @@ var backButton = function () {
 
 //italian league
 var SerieA = function () {
-    
+
             //new on serie A page
 
             var italyNews = function (data) {
@@ -150,7 +168,7 @@ var SerieA = function () {
                   success: function(data){
                       console.log('success', data);
                       console.log(data);
-                    
+
                       var itemResults = ' <div class="col-xs-12  latestItNewsT" id="latestItNewsTitle">'+ data.articles[1].title +'</div>';
                           itemResults += '<div class = "col-xs-12 latestItImage" id="latestItImageOne" style="background-image: url(' + data.articles[1].urlToImage + ')"></div>';
                           itemResults += ' <div class="col-xs-12 latestItNews" id="latestItNewsOne">'+ data.articles[1].description +'</div>';
@@ -158,12 +176,12 @@ var SerieA = function () {
                           itemResults += '<div class="col-xs-12 latestItNews" id="latestItNewsThree">'+ data.articles[3].description +'</div>';
                           itemResults += '<div class="col-xs-12 latestItNews" id="latestItNewsFour">'+ data.articles[4].description +'</div>';
                           itemResults += '<div class="col-xs-12 latestItNews" id="latestItNewsFive">'+ data.articles[5].description +'</div>';
-                      
-                      $("#serieAPI").html(itemResults); 
+
+                      $("#serieAPI").html(itemResults);
                   }
-                  }); 
+                  });
             };
-    
+
   $('#italyLogo').click(function() {
   $('.wholePage').hide( 1, function() {
     // alert( "Animation complete." );
@@ -177,7 +195,7 @@ var SerieA = function () {
 //english league
 
 var EPL = function () {
-    
+
     //new on serie A page
 
             var englishNews = function (data) {
@@ -187,7 +205,7 @@ var EPL = function () {
                   success: function(data){
                       console.log('success', data);
                       console.log(data);
-                    
+
                       var itemResults = ' <div class="col-xs-12 latestEnNewsT" id="latestEnNewsTitle">'+ data.articles[1].title +'</div>';
                           itemResults += '<div class = "col-xs-12 latestEnImage" id="latestEnImageOne" style="background-image: url(' + data.articles[1].urlToImage + ')"></div>';
                           itemResults += ' <div class="col-xs-12 latestEnNews" id="latestEnNewsOne">'+ data.articles[1].description +'</div>';
@@ -195,12 +213,12 @@ var EPL = function () {
                           itemResults += '<div class="col-xs-12 latestEnNews" id="latestEnNewsThree">'+ data.articles[3].description +'</div>';
                           itemResults += '<div class="col-xs-12 latestEnNews" id="latestEnNewsFour">'+ data.articles[4].description +'</div>';
                           itemResults += '<div class="col-xs-12 latestEnNews" id="latestEnNewsFive">'+ data.articles[5].description +'</div>';
-                      
-                      $("#englishAPI").html(itemResults); 
+
+                      $("#englishAPI").html(itemResults);
                   }
-                  }); 
+                  });
             };
-    
+
   $('#englishLogo').click(function() {
   $('.wholePage').hide( 1, function() {
     // alert( "Animation complete." );
@@ -237,22 +255,22 @@ var news = function (data) {
           document.getElementById("latestNewsSix").innerHTML = latNewsSix ;
           document.getElementById("latestNewsSeven").innerHTML = latNewsSeven ;
       }
-      }); 
+      });
 };
 
 
 $(document).ready(function() {
        //existing user
        $('#mainDisplay').hide();
-          
+
             $('#existingUser').submit(function (event) {
                   event.preventDefault();
                   var username = $('input#username').val();
                   var password = $('input#password').val();
                   loginUser(username,password);
           });
-          
-         //new user   
+
+         //new user
             $('#newUser').submit(function (event) {
                  //alert("here!!!");
                 event.preventDefault();
@@ -267,9 +285,9 @@ $(document).ready(function() {
                     newUser(username, password);
                 }
              });
-             
+
         //video search submit
-        
+
         $('#submitTeam').on("click", function (e) {
                 e.preventDefault();
                 // alert('working');
@@ -279,7 +297,7 @@ $(document).ready(function() {
                 $('#logos').css('display', 'none');
                 $('#latestNewsArea').css('display', 'none');
     });
-  
+    quickAccess();
     $('.backButton').hide();
     $('.addtionalPages').hide();
     backButton();

@@ -60,6 +60,7 @@ p{
     background: slategray;
     border-color: darkslategray;
     margin-top:1rem;
+    display: inline-block;
 }
 
 #login {
@@ -115,7 +116,7 @@ p{
     background-position: center center;
     background-repeat: no-repeat;
     margin-bottom:1rem;
-    
+
 }
 
 
@@ -175,13 +176,13 @@ h2 {
 
 #latestItNewsTitle, #latestEnNewsTitle {
     font-size: 30px;
-    
+
 }
 
 
 #latestItImageOne, #latestEnImageOne {
     height:220px;
-    
+
 }
 
 }
@@ -190,10 +191,10 @@ h2 {
 /*iPhone portrait*/
 
 @media only screen and (max-width: 320px) {
-    
+
 #italyLogo, #englishLogo {
     width:100%;
-    
+
 }
 
 #loginText{
