@@ -26,7 +26,7 @@ body {
     text-align: center;
     font-family: 'Righteous', cursive;
     font-size: 18px;
-    background-color: #3399FF;
+    background-color: #5DB24B;
 }
 
 h1 {
@@ -57,12 +57,13 @@ p{
 .buttons {
     font-size: 20px;
     color: aliceblue;
-    background: slategray;
+    background: #B20085;
     border-color: darkslategray;
     margin-top:1rem;
-    display: inline-block;
 }
-
+#quick-access {
+    margin-bottom: 1rem;
+}
 #login {
     margin-bottom: 1rem;
 }
@@ -92,8 +93,9 @@ p{
 .latestNews {
     margin-bottom:1.2rem;
     border-style: solid;
-    border-color:aliceblue;
+    border-color:#A4FF92;
     border-width:2px;
+    padding:2rem;
 }
 
 #latestItNewsTitle, #latestEnNewsTitle {
@@ -105,8 +107,9 @@ p{
 .latestItNews, .latestEnNews {
     margin-bottom:1.2rem;
     border-style: solid;
-    border-color:aliceblue;
+    border-color:#A4FF92;
     border-width:2px;
+    padding:2rem;
 }
 
 #latestItImageOne, #latestEnImageOne {

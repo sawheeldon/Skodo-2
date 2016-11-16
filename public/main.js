@@ -11,6 +11,7 @@ var userID;
 
 var quickAccess = function (){
         $('#quick-access').click(function(){
+                $('#loginSection').hide();
                 $('#mainDisplay').show();
                 $('.wholePage').show();
                 $('.backButton').hide();
